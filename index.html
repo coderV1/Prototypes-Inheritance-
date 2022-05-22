@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+</head>
+<body>
+    <h1 id="show"></h1>
+</body>
+</html>
+<script>
+    class Car {
+        constructor(Name) {
+            this.carname = Name;
+  }
+  First() {
+    return 'I Bought New Car ' + this.carname;
+  }
+}
+
+class Model extends Car {
+  constructor(Name, model) {
+    super(Name);
+    this.model = model;
+  }
+  show() {
+    return this.First()+" " +"And Model Of Car Is"+" "+ this.model;
+  }
+}
+
+let car = new Model("Tata", "Safari");
+document.querySelector("#show").innerHTML = car.show();
+
+
+</script>
